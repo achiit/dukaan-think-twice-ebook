@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Think Twice: a short guide to the psychology of everyday choices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f4;--ink:#1b2433;--muted:#4f5b6d;--card:#ffffff;--line:#cfd8e0;--accent:#2a7a82;--accent-ink:#ffffff;--l1:#2a7a82;--l2:#4d6a9a;--l3:#1b2433;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161f;--ink:#e8edf2;--muted:#a3afbf;--card:#18212d;--line:#2b3747;--accent:#5fc0c8;--accent-ink:#0b1117;--l1:#5fc0c8;--l2:#7f9ccc;--l3:#e8edf2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161f;--ink:#e8edf2;--muted:#a3afbf;--card:#18212d;--line:#2b3747;--accent:#5fc0c8;--accent-ink:#0b1117;--l1:#5fc0c8;--l2:#7f9ccc;--l3:#e8edf2;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:600;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.hero{display:grid;gap:40px;padding:48px 0 72px;align-items:center;border:0}
+@media(min-width:800px){.hero{grid-template-columns:1.2fr .8fr}}
+.sub{font-family:"Newsreader",Georgia,serif;font-size:1.3rem;font-style:italic;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:14px 26px;border-radius:6px;font-weight:600;text-decoration:none;min-height:48px}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--l2);outline-offset:3px}
+.price{margin-left:14px;color:var(--muted)}
+.cover{position:relative;aspect-ratio:3/4;max-width:340px;width:100%;margin:0 auto;border-radius:4px;background:var(--l3);color:var(--bg);padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 18px 40px -18px rgba(0,0,0,.45)}
+.cover i{position:absolute;left:-10%;right:-10%;border-radius:50%;opacity:.9}
+.cover .a{height:46%;bottom:28%;background:var(--l2);opacity:.55}
+.cover .b{height:46%;bottom:14%;background:var(--l1);opacity:.7}
+.cover .c{height:30%;bottom:-8%;background:var(--accent);opacity:.9}
+.cover b,.cover span{position:relative;z-index:1}
+.cover b{font-family:"Newsreader",Georgia,serif;font-size:1.7rem;line-height:1.1;font-weight:600}
+.cover span{font-size:.85rem}
+.learn{display:grid;gap:18px}
+@media(min-width:800px){.learn{grid-template-columns:repeat(3,1fr)}}
+.learn div{border-left:3px solid var(--accent);padding-left:16px}
+.learn h3{font-size:1.3rem;margin-bottom:.3em}
+.learn p{color:var(--muted);margin:0}
+ol.ch{list-style:none;margin:0;padding:0;counter-reset:c;max-width:720px}
+ol.ch li{counter-increment:c;display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+ol.ch li::before{content:counter(c);font-family:"Newsreader",Georgia,serif;font-size:1.6rem;color:var(--accent);min-width:1.6em}
+ol.ch strong{display:block}
+ol.ch small{color:var(--muted);font-size:.95rem}
+.author{display:grid;gap:24px;align-items:center}
+@media(min-width:700px){.author{grid-template-columns:140px 1fr}}
+.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(160deg,var(--l1),var(--l2));}
+.quotes{display:grid;gap:18px}
+@media(min-width:800px){.quotes{grid-template-columns:repeat(3,1fr)}}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:22px}
+blockquote p{font-family:"Newsreader",Georgia,serif;font-size:1.15rem}
+blockquote footer{color:var(--muted);font-size:.9rem}
+details{border-bottom:1px solid var(--line);padding:16px 0;max-width:720px}
+summary{cursor:pointer;font-weight:600;min-height:32px}
+details p{margin:.7em 0 0;color:var(--muted)}
+.buy{text-align:center;background:var(--l3);color:var(--bg);border:0}
+.buy p{margin-left:auto;margin-right:auto}
+.buy .btn{background:var(--bg);color:var(--ink)}
+.upi-label{margin-bottom:0;color:var(--muted)}.upi{font-family:"Newsreader",Georgia,serif;font-size:clamp(2rem,8vw,3rem);letter-spacing:.04em;margin:.1em auto .5em}#cmsg{margin-left:10px;font-size:.9rem}
+footer.site{padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<div class="wrap">
+<header class="hero">
+<div>
+<h1>Think Twice</h1>
+<p class="sub">The biases, habits, and stories that quietly run your day, and how to notice them.</p>
+<p>A short, practical ebook drawn from decades of psychology research. Read it in a weekend and start catching your own mental shortcuts on Monday.</p>
+<p><a class="btn" href="#buy">Get the ebook</a><span class="price">₹299 · PDF</span></p>
+</div>
+<div class="cover" role="img" aria-label="Book cover mockup">
+<i class="a"></i><i class="b"></i><i class="c"></i>
+<b>Think Twice</b>
+<span>Aarav Mehta</span>
+</div>
+</header>
+</div>
+
+<section><div class="wrap">
+<h2>What you’ll learn</h2>
+<div class="learn">
+<div><h3>How your mind decides</h3><p>Why fast, automatic judgments feel like facts, and when to slow them down.</p></div>
+<div><h3>Why habits stick</h3><p>The cue, routine, and reward loops behind what you do without thinking.</p></div>
+<div><h3>How to change your mind</h3><p>Simple tools for testing a belief before it hardens into an identity.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Inside the book</h2>
+<ol class="ch">
+<li><div><strong>Two speeds of thinking</strong><small>Fast intuition and slow reasoning</small></div></li>
+<li><div><strong>The stories we tell ourselves</strong><small>Memory, narrative, and hindsight</small></div></li>
+<li><div><strong>Biases you already have</strong><small>Anchoring, confirmation, and the halo effect</small></div></li>
+<li><div><strong>Emotion is information</strong><small>What feelings can and cannot tell you</small></div></li>
+<li><div><strong>Why we follow the crowd</strong><small>Social proof and belonging</small></div></li>
+<li><div><strong>Habits and willpower</strong><small>Designing your environment</small></div></li>
+<li><div><strong>Changing your mind</strong><small>Practical exercises</small></div></li>
+<li><div><strong>A 30-day practice</strong><small>One small experiment per day</small></div></li>
+</ol>
+</div></section>
+
+<section><div class="wrap author">
+<div class="avatar" role="img" aria-label="Author portrait placeholder"></div>
+<div>
+<h2>About the author</h2>
+<p>Aarav Mehta writes about everyday psychology: how people make decisions, build habits, and change their minds. This book is a plain-language guide to the ideas that matter most.</p>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>What readers say</h2>
+<div class="quotes">
+<blockquote><p>“I caught myself anchoring on a price in the first hour. Clear and never preachy.”</p><footer>Reader name, role</footer></blockquote>
+<blockquote><p>“The 30-day practice is the best part. Small, doable, and it worked.”</p><footer>Reader name, role</footer></blockquote>
+<blockquote><p>“Finally a psychology book that respects my time.”</p><footer>Reader name, role</footer></blockquote>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Questions</h2>
+<details><summary>What formats do I get?</summary><p>You get the ebook as a PDF, sent to you after payment.</p></details>
+<details><summary>How long is it?</summary><p>About 120 pages, or roughly three hours of reading.</p></details>
+<details><summary>Do I need a psychology background?</summary><p>No. Every idea is explained in plain language with everyday examples.</p></details>
+<details><summary>Can I get a refund?</summary><p>Yes. Message within 14 days of payment and you’ll get your money back.</p></details>
+</div></section>
+
+<section class="buy" id="buy"><div class="wrap">
+<h2>Pay with UPI</h2>
+<p>Pay ₹299 by UPI, then send your payment screenshot on WhatsApp to get the PDF.</p>
+<p class="upi-label">UPI number</p>
+<p class="upi" id="upi">9848267783</p>
+<p><button class="btn" id="copy" type="button">Copy UPI number</button> <span id="cmsg" role="status"></span></p>
+<p><a class="btn" href="https://wa.me/919848267783?text=Hi%2C%20I%20paid%20for%20the%20ebook.%20Here%20is%20my%20payment%20screenshot." target="_blank" rel="noopener">Send screenshot on WhatsApp</a></p>
+</div></section>
+</main>
+<footer class="site"><div class="wrap">© 2026 Aarav Mehta</div></footer>
+<script>
+document.getElementById("copy").addEventListener("click",async()=>{
+  const n=document.getElementById("upi").textContent.trim(),m=document.getElementById("cmsg");
+  try{await navigator.clipboard.writeText(n);m.textContent="Copied.";}
+  catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById("upi"));const s=getSelection();s.removeAllRanges();s.addRange(r);m.textContent="Number selected. Copy it.";}
+});
+</script>
+</body>
+</html>
